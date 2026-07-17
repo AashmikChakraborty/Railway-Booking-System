@@ -1,0 +1,174 @@
+AIM:
+
+To design and implement a console-based Railway Booking System in Python that applies Object-Oriented Programming principles to simulate a real-world railway reservation workflow, including train allocation, seat booking, ticket generation, fare calculation, and transaction logging.
+
+PROBLEM STATEMENT:
+Build a terminal-driven railway booking application where the user can enter passenger details, source station, destination station, journey date, and required number of seats.
+The system must automatically allocate a train based on route availability, calculate total fare, generate PNR number, allocate coach and seat numbers, print a formatted railway ticket, and store booking records into text files.
+The application must validate inputs, handle invalid entries gracefully using exception handling, and prevent abrupt program termination.
+
+INPUTS:
+Terminal menu option (1 / 2 / 3)
+Passenger name
+Passenger age
+ID proof number
+Source station
+Destination station
+Journey date
+Number of seats required
+Booking confirmation (yes/no)
+
+OUTPUTS:
+Display of allotted train details
+Fare details including total ticket cost
+Railway ticket with:
+PNR Number
+Passenger details
+Train details
+Coach number
+Seat numbers
+Total fare
+Booking confirmation message
+Error message for invalid input or unavailable seats
+Booking details stored in:
+bookings.txt
+tickets.txt
+
+CONCEPTS USED:
+Object-Oriented Programming
+Passenger Class
+Train Class
+Booking Class
+Encapsulation
+Private seat variable (__seats)
+Inheritance
+Booking class inherits Train class
+Polymorphism
+display() method implementation
+Exception Handling
+Invalid input handling using try-except
+File Handling
+Writing booking details into text files
+Loops and Conditional Statements
+Menu-driven while loop and booking logic
+Random Module
+Random PNR, coach, and seat generation
+
+ALGORITHM:
+Step 1:
+
+Start the program.
+
+Step 2:
+
+Create Passenger, Train, and Booking classes.
+
+Step 3:
+
+Load predefined train data including:
+
+Train Number
+Train Name
+Source
+Destination
+Departure Time
+Arrival Time
+Available Seats
+Ticket Price
+Step 4:
+
+Display the main menu:
+1 - Book Ticket
+2 - View Bookings
+3 - Exit
+
+Step 5:
+
+Accept user choice.
+
+Step 6:
+
+If choice = 1:
+
+a.
+
+Accept passenger details:
+
+Name
+Age
+ID Proof Number
+b.
+
+Accept journey details:
+
+Source Station
+Destination Station
+Journey Date
+Number of Seats Required
+c.
+
+Search matching trains based on source and destination.
+
+d.
+
+If no train is found:
+
+Display error message.
+e.
+
+Automatically allot the first available train.
+
+f.
+
+Display:
+
+Train details
+Available seats
+Ticket fare
+g.
+
+Calculate total fare:
+Total Fare = Ticket Price × Number of Seats
+
+h.
+
+Ask for booking confirmation.
+
+i.
+
+If confirmed:
+
+Check seat availability.
+Generate:
+Random PNR Number
+Coach Number
+Seat Numbers
+j.
+
+Save booking details into bookings.txt.
+
+k.
+
+Generate and print formatted railway ticket.
+
+l.
+
+Save ticket into tickets.txt.
+
+Step 7:
+
+If choice = 2:
+
+Open and display all booking records from bookings.txt.
+Step 8:
+
+If choice = 3:
+
+Display exit message and terminate the program.
+Step 9:
+
+Handle invalid inputs using exception handling without crashing the system.
+
+Step 10:
+
+End the program.
